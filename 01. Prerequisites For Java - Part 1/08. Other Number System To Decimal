@@ -1,0 +1,29 @@
+Binary Number System to Decimal Number System: 
+
+In order to convert binary Number System to decimal Number System, we have to keep on multiplying the number by 2^i.
+
+Example: 
+
+1110 
+
+1 * 2^3 + 1 * 2^2 + 1 * 2^1 + 0 * 2^0 = 8 + 4 + 2 + 0
+
+Octal Number System to Decimal Number System: 
+
+In order to convert Octal Number System to decimal Number System, we have to keep on multiplying the number by 8^i.
+
+Example: 
+
+36
+
+3 * 8^1 + 6 * 8^0 = 24 + 6 = 30
+
+Hexadecimal Number System to Decimal Number System: 
+
+In order to convert Hexadecimal Number System to decimal Number System, we have to keep on multiplying the number by 16^i.
+
+Example: 
+
+64
+
+6 * 16^1 + 4 * 16^0 = 100

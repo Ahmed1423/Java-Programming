@@ -1,0 +1,37 @@
+Decimal Number System to Binary Number System: 
+
+In order to convert decimal Number System to Binary Number System, we have to keep on dividing the number by 2 and then storing up the remainders. 
+
+Example: 
+
+2 |10
+2 |5 - 0
+2 |2 - 1
+2 |1 - 0
+
+Decimal Number: 10
+Binary Number: 1010
+
+Decimal Number System to Octal Number System: 
+
+In order to convert decimal Number System to Octal Number System, we have to keep on dividing the number by 8 and then storing up the remainders. 
+
+Example: 
+
+8 |30
+8 |3 - 6
+
+Decimal Number: 10
+Octal Number: 36
+
+Decimal Number System to Hexadecimal Number System: 
+
+In order to convert decimal Number System to Hexadecimal Number System, we have to keep on dividing the number by 16 and then storing up the remainders. 
+
+Example: 
+
+16 |100
+16 |6 - 4
+
+Decimal Number: 10
+HeaxDecimal Number: 64
