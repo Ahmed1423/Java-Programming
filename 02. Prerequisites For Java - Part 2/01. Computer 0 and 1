@@ -1,0 +1,12 @@
+Why computers can understand only ones and zeros:
+
+Computers or any other digital devices are made up of thousands of tiny electronic components called as transistors.
+These transistors are nothing but switches that regulate the flow of electricity so when the switch is on the electricity flows and when the switch is off the electricity doesn't flow.
+
+You can imagine this as a light bulb controlled by a switch.
+
+i) when the switch is on, the light bulb close.
+ii) When the switch is off, the light bulb does not glow.
+
+So transistors can be represented by 2 states ON and OFF indicating the flow of electricity and the best way to represent these on and off states is using 2 numbers 0 and 1 that is nothing but binary number system,
+so 0 can be an indication that there is no flow of electricity and 1 is an indication that there is a flow of electricity.
