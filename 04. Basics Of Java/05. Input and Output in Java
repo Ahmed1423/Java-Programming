@@ -1,0 +1,22 @@
+In order to read input from console: 
+
+We can use scanner object.
+
+Scanner sc = new Scanner(System.in);
+
+
+int number = scanner.nextInt();
+String value = scanner.next() (or) scanner.nextLine();
+boolean isFalse = scanner.nextBoolean();
+float num = scanner.nextFloat();
+double pi = scanner.nextDouble();
+Byte b = scanner.nextByte();
+Short s = scanner.nextShort();
+long digit = scanner.nextLong();
+
+scanner.close(); // Good practice to close scanner once you are done with your work. 
+
+In order to write output to console: 
+
+System.out.println("Hello, Ahmed!"); // prints and moves to new line
+System.out.print("Hello, Ahmed!"); // prints and continues in the same line.

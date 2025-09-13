@@ -1,0 +1,22 @@
+Comments are non-executable lines in code that help explain what the code is doing.
+They make your program easier to understand and maintain.
+
+Java supports three types of comments:
+
+1) Single-line Comments
+
+    Used for brief explanations or notes.
+    Begin with //
+    Everything after // on that line is ignored by the compiler.
+
+2) Multi-line Comments
+
+    Used for longer explanations that span multiple lines.
+    Begin with /* and end with */
+    Everything between /* and */ is ignored by the compiler.
+
+3) Documentation Comments
+
+    Used to generate external documentation using the javadoc tool.
+    Begin with /** and end with */
+    Often placed above classes, methods, or fields to describe their purpose.

@@ -1,0 +1,37 @@
+A data type defines the kind of data a variable can hold. Variables are like containers, but not all containers can hold every type of data.
+Each type of data needs a specific kind of container—this is where data types come in.
+
+Examples:
+
+- Whole numbers → int
+- Large numbers → long
+- True/False values → boolean
+- Single characters → char
+
+Categories of Data Types in Java:
+
+Java has two main categories of data types:
+
+    1.Primitive Data Types Used to store simple values. These types store the actual value in memory.
+
+      Java provides 8 primitive types:
+
+      byte → 1 byte
+      short → 2 bytes
+      int → 4 bytes
+      long → 8 bytes
+      float → 4 bytes
+      double → 8 bytes
+      char → 2 bytes (uses Unicode character set)
+      boolean → 1 bit (true or false)
+
+    2.Non-Primitive (Reference) Data Types Used to store complex values. These types store a reference (memory address) pointing to the location
+      of the object in memory, rather than the actual value.
+
+      Examples include:
+
+      String
+      Class
+      Interface 
+      Enum
+      Collections (e.g., List, Set, Map)

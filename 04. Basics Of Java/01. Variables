@@ -1,0 +1,9 @@
+Variables are nothing but containers which are used to hold (or) store the data. 
+
+Example: 
+
+int a; // declaration
+
+a = 10; // initialization
+
+int a = 10; // declaration + initialization

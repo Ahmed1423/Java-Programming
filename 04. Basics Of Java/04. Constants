@@ -1,0 +1,15 @@
+Constants in Java are nothing but variables whose value cannot be changed once assigned. 
+
+Example: x = 10;
+
+In order to make this a constant:
+
+final int x = 10;
+
+x = 5 // gives an error.
+
+
+Constants are generally written in CAPS with _ as separation
+
+Example: final String NAME = "Ahmed";
+         final String FIRST_NAME = "Mohammed"; 
