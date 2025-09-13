@@ -23,13 +23,67 @@ It can only run programs, we cannot write anything with it.
 
 JVM: 
 
-JVM stands for Java Virtual Machine. It is responsible for executing java programs. It does not exist physically and is an abstract
-machine. It consists of following:
+The JVM is an abstract computing machine that enables a computer to run Java programs.
 
-- Classloader: responsible for loading bytecode into the memory. 
-- ByteCode Verifier: Verifies the bytecode for any illegal code. 
-- execution engine: responsible for executing the program. 
-  Contains interpreter, jit compiler and garbage collector.
-- automatic garbage collection: frees up unused memory. 
-- Stack - where method calls, local variables are stored 
-- heap - Where objects are stored.  
+It interprets Java bytecode, which is compiled from .java source files using the javac compiler.
+
+Bytecode is platform-independent, and the JVM translates it into machine-specific instructions.
+
+The JVM is composed of several key subsystems:
+
+1. Class Loader Subsystem
+
+    Loads .class files into memory.
+
+    Performs:
+
+        Loading: Reads bytecode.
+
+        Linking: Verifies and prepares classes.
+
+        Initialization: Executes static initializers.
+
+    Types of class loaders:
+
+        Bootstrap: Loads core Java classes (e.g., java.lang.*).
+
+        Extension: Loads classes from jre/lib/ext.
+
+        Application: Loads user-defined classes
+
+2. Runtime Data Areas
+
+These are memory regions used during execution:
+Area	Purpose
+
+- Method Area:	Stores class structures, method code, constants
+- Heap:	Allocates objects and class instances
+- Java Stack:	Stores frames for method calls, local variables
+- PC Register:	Tracks current instruction for each thread
+- Native Method Stack:	Supports native (non-Java) method execution
+
+Each thread gets its own stack and PC register
+
+3. Execution Engine
+
+    Executes bytecode using:
+
+        Interpreter: Reads and executes bytecode line-by-line.
+
+        JIT Compiler: Converts frequently used bytecode into native machine code for speed
+
+4. Native Interface
+
+    Connects Java code with native libraries (e.g., C/C++ via JNI).
+
+5. Garbage Collector
+
+    Automatically manages memory by removing unused objects from the heap.
+
+  
+
+Java, ByteCode are platform independent.
+JVM is platform dependent. 
+
+JVM is an abstract machine meaning it's a specification that tells what to do, not how to do it. 
+Vendors like Oracle, Open JDK will have their own JVM implementation.
