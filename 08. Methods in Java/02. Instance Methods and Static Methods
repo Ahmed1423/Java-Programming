@@ -1,0 +1,16 @@
+Instance Methods and Static Methods in Java: 
+
+Instance methods are bound to object. 
+Instance methods are not declared with static keyword.
+Instance methods can access instance variables and static varaibles. 
+Instance methods can access other instance methods and static methods.
+Instance methods can have this keyword.
+Instance methods are called via object.
+
+
+Static methods are bound to class.
+Static methods are declared with static keyword.
+Static methods can only access static varaibles.
+Static methods can only access other static methods. 
+Static methods cannot have this keyword. 
+Static methods are called via class.

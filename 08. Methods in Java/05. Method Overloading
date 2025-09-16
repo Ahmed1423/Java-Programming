@@ -1,0 +1,8 @@
+Method overloading is a powerful feature in Java that lets you define multiple methods with the same name in
+a class, as long as their parameter lists are different.
+
+Purpose of Method Overloading
+
+✅ Improves readability: You don’t need to invent new method names for similar operations.
+🔄 Supports polymorphism: Specifically, compile-time polymorphism (also called static polymorphism).
+🧠 Makes code intuitive: One method name can handle different types or numbers of inputs.

@@ -1,0 +1,19 @@
+Four Different Method Signatures: 
+
+1. void methodName()  {
+  // method body
+}
+
+2. <returnType> methodName() {
+  // method body
+  return <value>;
+}
+
+3. void methodName(..args) {
+  // method body
+}
+
+4. <returnType> methodName(..args) {
+  // method body
+  return <value>;
+}

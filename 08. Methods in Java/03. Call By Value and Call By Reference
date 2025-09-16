@@ -1,0 +1,22 @@
+🔁 Call by Value
+
+Definition: A copy of the actual value is passed to the method.
+Effect: Changes made inside the method do not affect the original variable.
+Used for: Primitive types like int, float, char, etc.
+
+🔗 Call by Reference
+
+Definition: A reference (memory address) to the original variable is passed.
+Effect: Changes made inside the method do affect the original variable.
+Used in languages like: C++ (with pointers), Python (with mutable objects)
+
+🧩 What Does Java Use?
+
+Java is strictly call by value—but with a twist when it comes to objects:
+✅ Primitive types: Passed by value (no surprises here)
+✅ Objects: The reference to the object is passed by value
+
+So while Java doesn’t support true call by reference, it copies the reference, meaning:
+
+You can modify the object’s internal state
+But you can’t reassign the reference to point to a new object and expect the caller to see that change

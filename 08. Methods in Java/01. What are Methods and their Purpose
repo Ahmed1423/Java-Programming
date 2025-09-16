@@ -1,0 +1,17 @@
+🛠️ What Are Methods in Java?
+A method in Java is a block of code that performs a specific task. Think of it like a mini-program inside your program.
+
+🔑 Key Components of a Method:
+Access modifier: Controls visibility (e.g., public, private)
+Return type: What the method gives back (int, String, or void if nothing)
+Method name: Follows camelCase naming (e.g., calculateSum)
+Parameters: Optional inputs the method can use
+Method body: The actual code that runs
+
+🎯 What’s the Purpose of Methods?
+Methods are the building blocks of clean, efficient, and maintainable Java code. Here's why they matter:
+
+✅ Reusability: Write once, use many times—no need to repeat code
+👓 Readability: Named methods make code easier to understand
+🛠️ Maintainability: Easier to fix bugs or update logic
+🧪 Testability: You can test methods independently
