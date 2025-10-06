@@ -27,3 +27,10 @@ Common Methods:
 04. contains()
 05. equals()
 06. substring()
+
+
+Strings are immutable in Java by Design because of following reasons:
+
+- used in file paths, database credentials etc. If it was mutable, malicious code could alter them after validation.
+- immutable objects are inherently thread safe.
+- string pool optimizations - optimizing memory and performance.
