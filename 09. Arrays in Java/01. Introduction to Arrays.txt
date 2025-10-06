@@ -1,0 +1,11 @@
+An Array is a collection of similar elements stored in contiguos memory locations. 
+
+Arrays are nothing but heap objects. 
+
+length property gives size of array. 
+
+Examples: a.length
+
+Index of the array starts from 0.
+
+Access time is O(1).

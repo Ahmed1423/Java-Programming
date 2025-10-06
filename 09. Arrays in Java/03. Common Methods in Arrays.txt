@@ -1,0 +1,11 @@
+1. Sort 
+
+Arrays.sort(a);
+
+2. Binary Search
+
+Arrays.binarySearch(a, key);
+
+3. fill 
+
+Arrays.fill(a, 0);

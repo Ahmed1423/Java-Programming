@@ -1,0 +1,13 @@
+Arrays vs Array List:
+
+Arrays are fixed in Java. 
+ArrayList is dynamic
+
+Arrays supports both primitive/objects
+ArrayList supports objects. 
+
+Arrays are faster. 
+ArrayList has slight overhead. 
+
+Arrays have limited methods.
+ArrayList has rich collection of methods.
