@@ -1,0 +1,9 @@
+String Constant Pool: It is a special area inside the heap memory where strings are stored.
+
+If we are using a string literal, objects will be created and stored in constant pool. 
+JVM checks if the object is present, if yes then variable points to that object else a new object is created
+and variable will point to the object newly created. 
+
+If we are using new Keyword, everytime a new instance will be created. 
+
+String constant pool was introduced for performance and memory efficiency.

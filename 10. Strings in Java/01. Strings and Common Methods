@@ -1,0 +1,29 @@
+Strings in Java: 
+
+Strings are Objects in Java that stores sequence of characters. Every character occupies 2 bytes of memory.
+
+Strings are immutable in Java, meaning once object is created it cannot be modified.
+
+There are two ways of creating string:
+
+01. String literal: 
+
+String name = "Ahmed";
+
+02. Using new keyword: 
+
+String name = new String("Ahmed");
+
+
+
+String literals are stored in string constant pool area in the heap memory. 
+Strings created with new keyword are present in heap memory outside of string constant pool. 
+
+Common Methods: 
+
+01. length()
+02. toLowerCase()
+03. toUpperCase()
+04. contains()
+05. equals()
+06. substring()

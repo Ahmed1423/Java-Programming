@@ -1,0 +1,4 @@
+String Builder and String Buffer are mutable versions of string. 
+
+String Buffer is thread safe, can be used in a multi threaded environment.
+String Builder is not thread safe, should be used in a single threaded environment.
