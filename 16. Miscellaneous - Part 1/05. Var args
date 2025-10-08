@@ -1,0 +1,25 @@
+varargs (variable-length arguments) in Java are a powerful feature that lets you pass zero or more arguments to a method without explicitly creating an array.
+
+public class Main {
+    static int sum(int... numbers) {
+        int total = 0;
+        for (int num : numbers) {
+            total += num;
+        }
+        return total;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sum());             // 0
+        System.out.println(sum(1, 2, 3));      // 6
+        System.out.println(sum(10, 20, 30, 40)); // 100
+    }
+}
+
+
+🔍 Rules to Remember
+You can pass any number of arguments, including none.
+
+You can’t have more than one varargs parameter in a method.
+
+It must be the last parameter:

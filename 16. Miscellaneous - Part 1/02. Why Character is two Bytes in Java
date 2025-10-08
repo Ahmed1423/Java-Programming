@@ -1,0 +1,7 @@
+Java was designed to support internationalization from the start.
+
+Instead of ASCII (which uses 1 byte = 256 characters), Java uses Unicode, which can represent over 65,000 characters.
+
+Unicode characters range from \u0000 to \uFFFF — that’s 2¹⁶ = 65,536 possible values.
+
+So, Java’s char is a 16-bit unsigned data type.

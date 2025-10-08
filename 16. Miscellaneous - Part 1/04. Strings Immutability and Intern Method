@@ -1,0 +1,32 @@
+Strings are immutable in Java by design. 
+
+1. Security:
+
+- Strings are used in sensitive operations like file paths, network connections, and class loading.
+- If String were mutable, malicious code could alter values mid-execution.
+
+2. Thread Safety:
+
+- Immutable objects are inherently thread-safe.
+- Multiple threads can share a String without synchronization.
+- This makes String ideal for concurrent applications.
+
+3. Caching and Interning:
+
+- Java uses a String pool to reuse common string literals.
+- Since strings can’t change, "hello" can be safely reused across the JVM.
+- This reduces memory footprint and speeds up comparisons:
+
+🔁 String.intern() — What It Does
+The intern() method returns a canonical representation of a string from the String pool.
+
+✅ How It Works
+If the string already exists in the pool, intern() returns the reference to that pooled string.
+
+If it doesn’t exist, the string is added to the pool, and that reference is returned.
+
+String a = new String("hello");
+String b = "hello";
+
+System.out.println(a == b);           // false (different references)
+System.out.println(a.intern() == b);  // true (same pooled reference)

@@ -1,0 +1,24 @@
+Switch Expressions:
+
+- Returns a value directly.
+- No fall-through.
+
+class Main {
+    public static void main(String[] args) {
+        
+        String day = "Thursday";
+        
+        int result = switch(day) {
+            case "Monday" -> 1;
+            case "Tuesday" -> 2;
+            case "Wednesday" -> 3;
+            case "Thursday" -> 4;
+            case "Friday" -> 5;
+            case "Saturday" -> 6;
+            case "Sunday" -> 7;
+            default -> 0;
+        };
+        
+        System.out.println(result);
+    }
+}

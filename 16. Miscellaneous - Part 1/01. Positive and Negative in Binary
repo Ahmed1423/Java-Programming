@@ -1,0 +1,14 @@
+Positive numbers are represented in normal way, convert to 0's and 1's. 
+Negative numbers are represented in 2's complement.
+
+1's complement is invert all bits. 
+2's complement is 1's complement + 1.
+
+Last bit indicates sign (0 -> +ve, 1 -> -ve)
+
+Bitwise negation: 
+
++ve -> invert all bits 
+-ve -> invert all bits(2's complement)
+
+formula: -x-1.
