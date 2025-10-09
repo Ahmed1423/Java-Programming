@@ -1,0 +1,51 @@
+Generics means parameterized types. Generics allows us to work with different datatypes with in the same class.
+
+Types of Generics:
+
+1. Generics Class
+2. Generics Method 
+
+Generics only works with reference types.
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Pair<T, U> {
+    T key;
+    U value; 
+    
+    Pair(T key, U value) {
+        this.key = key;
+        this.value = value;
+    }
+    
+    T getKey() {
+        return key;
+    }
+    
+    U getValue() {
+        return value;
+    }
+    
+    <V> void printValue(V value) {
+        System.out.println(value);
+    }
+
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        Pair<Integer, Integer> pair = new Pair<>(1, 2);
+        
+        Pair<Integer, String> pair1 = new Pair<>(1, "a");
+        
+        System.out.println(pair.getKey());
+        System.out.println(pair.getValue());
+        System.out.println(pair1.getKey());
+        System.out.println(pair1.getValue());
+        
+        pair.printValue(6);
+        pair1.printValue("24");
+    }
+}

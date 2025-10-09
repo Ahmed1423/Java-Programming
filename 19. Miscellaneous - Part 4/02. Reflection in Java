@@ -1,0 +1,23 @@
+What Is Reflection?
+Definition: Reflection is a feature in Java that allows inspection and manipulation of classes, methods, fields, and constructors at runtime.
+Package: java.lang.reflect
+
+
+Class<?> – Entry point for reflection. Use .class, Class.forName(), or obj.getClass()
+Field – Represents class fields. Access via getDeclaredField() or getFields()
+Method – Represents methods. Access via getDeclaredMethod() or getMethods()
+Constructor – Represents constructors. Access via getDeclaredConstructor()
+Modifier – Utility class to inspect access modifiers (e.g., Modifier.isPrivate())
+
+
+🛠️ Common Use Cases:
+
+Dynamic class loading: Class.forName("com.example.MyClass")
+Access private fields/methods: field.setAccessible(true)
+Invoke methods dynamically: method.invoke(obj, args)
+Create objects dynamically: constructor.newInstance(args)
+Inspect annotations: clazz.getAnnotation(MyAnnotation.class)
+
+
+Performance	Reflection is slower than direct access; avoid in performance-critical code
+Security	Can bypass access controls; may be restricted by SecurityManager
