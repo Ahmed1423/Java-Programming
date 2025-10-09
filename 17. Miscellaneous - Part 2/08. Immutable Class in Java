@@ -1,0 +1,37 @@
+An immutable class in Java is a class whose objects cannot be modified once they are created. This ensures thread safety, predictability, and easier debugging.
+
+🔐 Key Characteristics of an Immutable Class
+To make a class immutable in Java, follow these principles:
+
+Declare the class as final: Prevents subclassing which could alter behavior.
+
+Make all fields private and final: Ensures fields are set once and not accessible directly.
+
+No setters: Only getters should be provided.
+
+Initialize fields via constructor: Use a parameterized constructor to set all fields.
+
+Perform deep copies for mutable fields: Prevent external references from modifying internal state.
+
+Return copies in getters for mutable fields: Avoid exposing internal mutable objects.
+
+Example:
+
+public final class Student {
+    private final String name;
+    private final int age;
+    private final List<String> subjects;
+
+    public Student(String name, int age, List<String> subjects) {
+        this.name = name;
+        this.age = age;
+        this.subjects = new ArrayList<>(subjects); // deep copy
+    }
+
+    public String getName() { return name; }
+    public int getAge() { return age; }
+    public List<String> getSubjects() {
+        return new ArrayList<>(subjects); // return copy
+    }
+}
+

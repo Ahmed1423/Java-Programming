@@ -1,0 +1,25 @@
+sealed class is a technique that limits the number of classes that can inherit the given class. 
+This means that only the classes designated by the programmer can inherit from that particular class, thereby restricting access to it.
+
+Steps to Create a Sealed Class:
+
+- Define the class that you want to make a seal.
+- Add the "sealed" keyword to the class and specify which classes are permitted to inherit it by using the "permits" keyword.
+
+Every subclass of a sealed class or interface must be declared as one of:
+
+final → cannot be extended further.
+
+sealed → continues the restriction with its own permits.
+
+non-sealed → lifts the restriction, allowing open inheritance.
+
+public sealed class Shape permits Circle, Square, Triangle {
+    // common logic
+}
+
+final class Circle extends Shape { }
+non-sealed class Square extends Shape { }
+sealed class Triangle extends Shape permits Equilateral { }
+
+final class Equilateral extends Triangle { }

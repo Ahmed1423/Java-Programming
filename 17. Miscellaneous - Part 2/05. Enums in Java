@@ -1,0 +1,33 @@
+Enum is a reference datatype in Java which is used to define a fixed set of constants. 
+
+enum SIZE {
+  LARGE, 
+  MEDIUM,
+  SMALL
+}
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        SIZE size = SIZE.MEDIUM;
+        
+        switch(size) {
+            case LARGE: System.out.println("large");
+                        break;
+            case MEDIUM: System.out.println("medium");
+                        break;
+            case SMALL: System.out.println("small");
+                        break;
+        }
+        
+        for(SIZE sizee: SIZE.values()) {
+            System.out.println(sizee);
+        }
+    }
+}
+
+
+- Enums can have fields, constructors and methods.
+- prevents invalid values from being assigned
+- enum constants are public, static and final

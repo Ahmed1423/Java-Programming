@@ -1,0 +1,18 @@
+🧠 What is Object in Java?
+
+The root superclass of all Java classes.
+Every class implicitly extends Object unless it explicitly extends another class.
+Provides default behavior that all objects inherit.
+
+🔧 Key Methods in Object Class:
+
+toString():	Returns string representation of the object. format: className@HexadecimalHashCode
+hashCode(): JVM generates a unique number called hashcode for every object. It is not internal address of object. 
+           Internal address of object is passed through an algorithm to give us the hash code. 
+equals(): compares passed object with the current object. If we override equals method, we must override hashcode as well.
+          Contract: Equal Objects must have equal hashcodes.
+finalize(): called before the garbage collector is run for clean up of the resources. 
+getClass(): returns a class object of this object. 
+clone(): creates and returns a copy of the object.
+
+wait(), notify() and notifyAll() are some other methods.

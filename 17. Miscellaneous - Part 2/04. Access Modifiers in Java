@@ -1,0 +1,8 @@
+Access modifiers helps us in controlling access for variables, methods, classes.
+
+There are four types of access modifiers:
+
+1. public : can be accessed from anywhere
+2. default: can be accessed within the same package
+3. protected: can be accessed by same class (or) subclasses in/out of package.
+4. private: can be accessed by same class where they are declared.

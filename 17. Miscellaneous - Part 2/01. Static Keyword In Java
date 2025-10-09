@@ -1,0 +1,51 @@
+Static Keyword in Java is mainly used for memory management, allowing variables and methods to be bound to class
+rather than the instance itself.
+
+Static uses:
+
+1. Variable 
+2. Method 
+3. Block
+4. Inner class
+
+Characteristics of static keyword:
+
+1. static members are bound to class, not the instance.
+2. memory is allocated only once when program runs, not for every object. 
+3. static members cannot access non static members.
+4. They are accessed by the class name.
+5. static methods cannot be overriden by subclasses, since it is bound to class and not object. 
+
+Static Variables: created only once and shared among all instances. 
+Static block: executed only once when the class is loaded. Used when we want to do any computation to initialize
+              static variables. Run before the constructor.
+Static methods: bound to class, not object. Can access static members only. Cannot refer to this (or) super in any way.
+Static class: A class can be static only if it's a nested class. If a nested class is static, we need not create reference
+              of outer class.  
+
+class Counter {
+    
+    static int counter;
+    
+    static {
+        counter = 0;
+    }
+    
+    Counter() {
+        counter += 1;
+    }
+    
+    static int getCount() {
+        return counter;
+    }
+}
+
+
+class Main {
+    public static void main(String[] args) {
+        Counter obj1 = new Counter();
+        Counter obj2 = new Counter();
+        
+        System.out.println(Counter.getCount());
+    }
+}

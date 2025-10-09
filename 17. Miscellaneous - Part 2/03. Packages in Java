@@ -1,0 +1,11 @@
+Packages are namespaces that organize classes and interfaces. They help:
+
+- Avoid name conflicts
+- Control access with visibility modifiers
+- Group related functionality
+
+Types of packages:
+
+1. User defined packages.
+2. Built in packages.
+

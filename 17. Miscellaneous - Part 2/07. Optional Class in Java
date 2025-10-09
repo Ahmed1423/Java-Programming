@@ -1,0 +1,13 @@
+🎯 What is Optional?
+
+A container object that may or may not hold a non-null value.
+Introduced in Java 8 to avoid NullPointerException and promote functional programming.
+
+- Optional.of(value)	
+  Wraps non-null value (throws if null)
+- Optional.ofNullable(value)
+  Wraps value (null allowed)
+- Optional.empty()
+  Creates an empty Optional
+
+There are other methods as well.

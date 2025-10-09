@@ -1,0 +1,15 @@
+Final Keyword in Java is used to prevent modification. 
+
+We can apply it to: 
+
+variable -> works as constants.
+method -> prevents overriding.
+class -> prevents inheritance.
+
+
+Final Variable can be initialized:
+
+1. directly. final int a = 10;
+2. constructor
+3. instance block
+4. static block
