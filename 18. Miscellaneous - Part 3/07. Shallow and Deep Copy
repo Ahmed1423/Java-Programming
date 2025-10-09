@@ -1,0 +1,42 @@
+🧪 Shallow Copy
+✅ Definition:
+A shallow copy duplicates the top-level object, but does not clone nested objects. It copies references — not the actual objects they point to.
+
+🧠 Behavior:
+Primitive fields → copied by value
+
+Object fields → copied by reference
+
+
+class Address {
+    String city;
+}
+
+class Student implements Cloneable {
+    String name;
+    Address address;
+
+    public Student(String name, Address address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone(); // shallow copy
+    }
+}
+
+
+
+🧬 Deep Copy
+✅ Definition:
+A deep copy duplicates the object and recursively clones all nested objects. Each field is independently copied.
+
+@Override
+protected Object clone() throws CloneNotSupportedException {
+    Student cloned = (Student) super.clone();
+    cloned.address = new Address(); // or address.clone() if Address is Cloneable
+    cloned.address.city = this.address.city;
+    return cloned;
+}

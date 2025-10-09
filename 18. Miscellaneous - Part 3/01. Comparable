@@ -1,0 +1,41 @@
+Comparable: An Interface which is used to define the natural ordering of the objects within the class.
+
+class Movie implements Comparable<Movie>{
+    
+    String name;
+    double rating;
+    int year;
+    
+    Movie(String name, double rating, int year) {
+        this.name = name;
+        this.rating = rating;
+        this.year = year;
+    }
+    
+    @Override
+    public int compareTo(Movie movie) {
+        // return Double.compare(this.rating, movie.rating);
+        // return Integer.compare(this.year, movie.year);
+         return this.name.compareTo(movie.name);
+    }
+    
+}
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        List<Movie> movies = new ArrayList<>();
+        
+        movies.add(new Movie("a", 3.2, 2012));
+        movies.add(new Movie("b", 1.3, 2013));
+        movies.add(new Movie("c", 2.4, 2011));
+        
+        Collections.sort(movies);
+        // Collections.sort(movies, Collections.reverseOrder());
+        
+        for(Movie movie: movies) {
+            System.out.println(movie.name + " with " + movie.rating + " in " + movie.year);
+        }
+    }
+}

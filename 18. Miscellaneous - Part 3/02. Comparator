@@ -1,0 +1,84 @@
+Comparator: An Interface which is used to define custom sorting logic externally.
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Movie{
+    
+    String name;
+    double rating;
+    int year;
+    
+    Movie(String name, double rating, int year) {
+        this.name = name;
+        this.rating = rating;
+        this.year = year;
+    }
+    
+    @Override
+    public String toString() {
+        return this.name + " with " + this.rating + " in " + this.year;
+    }
+}
+
+class Year implements Comparator<Movie> {
+    
+    @Override
+    public int compare(Movie m1, Movie m2) {
+        return Integer.compare(m1.year, m2.year);
+    }
+}
+
+class Rating implements Comparator<Movie> {
+    
+    @Override
+    public int compare(Movie m1, Movie m2) {
+        return Double.compare(m1.rating, m2.rating);
+    }
+}
+
+class Name implements Comparator<Movie> {
+    
+    @Override
+    public int compare(Movie m1, Movie m2) {
+        return m1.name.compareTo(m2.name);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        List<Movie> movies = new ArrayList<>();
+        
+        movies.add(new Movie("z", 3.2, 2012));
+        movies.add(new Movie("b", 1.3, 2013));
+        movies.add(new Movie("c", 2.4, 2011));
+        movies.add(new Movie("a", 2.4, 2012));
+        
+        Collections.sort(movies, new Rating());
+        movies.forEach(System.out::println);
+        
+        System.out.println();
+        
+        Collections.sort(movies, new Year());
+        movies.forEach(System.out::println);
+        
+        System.out.println();
+        
+        Collections.sort(movies, new Name());
+        movies.forEach(System.out::println);
+    }
+}
+
+
+Comparable vs Comparator:
+
+Comparable: natural sorting logic 
+Comparator: custom sorting logic 
+
+Comparable: compareTo 
+Comparator: compare
+
+Comparable: with in the class 
+Comparator: externally

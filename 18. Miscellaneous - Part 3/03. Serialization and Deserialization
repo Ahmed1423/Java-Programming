@@ -1,0 +1,59 @@
+🧩 What Is Serialization?
+Serialization is the process of converting a Java object into a byte stream so it can be:
+
+Saved to a file
+
+Sent over a network
+
+Stored in memory or a database
+
+✅ Key Requirements:
+The class must implement java.io.Serializable.
+
+All fields must be serializable (or marked transient if you want to skip them).
+
+🧪 Example:
+
+import java.io.*;
+
+class Student implements Serializable {
+    String name;
+    int age;
+    
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Writing to file:
+
+Student s = new Student("Tim", 22);
+ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("student.ser"));
+out.writeObject(s);
+out.close();
+
+Important Points of Serialisation:
+
+Platform-Independent: In Java, the serialization is a platform-independent process. It means that if we serialize an object using a byte stream on one platform can be easily deserialized on different platforms.
+Serializable Interface: If we want to make a class serializable, then it must implement the Serializable interface. This interface does not contain any methods or variables ( marker interface), but it gives a signal that the class is ready for serialization.
+
+
+
+🔄 What Is Deserialization?
+Deserialization is the reverse process — converting a byte stream back into a Java object.
+
+🔓 Reading from a file:
+
+ObjectInputStream in = new ObjectInputStream(new FileInputStream("student.ser"));
+Student s2 = (Student) in.readObject();
+in.close();
+
+System.out.println(s2.name + " - " + s2.age);
+
+⚠️ Gotchas
+Static fields are not serialized.
+
+Changing class structure without updating serialVersionUID can cause InvalidClassException.
+
+Sensitive data should be encrypted before serialization.

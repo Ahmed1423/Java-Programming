@@ -1,0 +1,8 @@
+A marker Interface is an empty interface that has no fields or methods.
+
+A marker interface is a special type of interface because it does not have any methods, so when a class implements a marker interface, it means it is giving a signal to Java that this class should be treated differently.
+
+Example: 
+
+1. Serializable Interface
+2. Cloneable Interface

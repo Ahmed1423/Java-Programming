@@ -1,0 +1,71 @@
+In Java, an inner class is a class defined within another class or interface. It groups logically related classes, enhancing encapsulation and making code more readable and aligned with real-world object-oriented design.
+
+Features of Inner Class
+Making code clean and readable.
+Private methods of the outer class can be accessed, so bringing a new dimension and making it closer to the real world.
+Optimizing the code module.
+
+Example 1:
+
+public class OuterClass {
+
+    // Inner class
+    class InnerClass {
+        void display() {
+            System.out.println("Hello from Inner Class!");
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create OuterClass object
+        OuterClass outer = new OuterClass();
+
+        // Create InnerClass object using OuterClass
+        OuterClass.InnerClass inner = outer.new InnerClass();
+
+        // Call method
+        inner.display();
+    }
+}
+
+Example 2:
+
+import java.util.*;
+
+// Class 1 Outer class
+class Outer {
+
+    // Method
+    private static void outerMethod()
+    {
+
+        // Print statement
+        System.out.println("inside outerMethod");
+    }
+
+    // Class 2 Static inner class
+    static class Inner {
+
+        public static void display()
+        {
+
+            // Print statement
+            System.out.println("inside inner class Method");
+
+            // Calling method inside main() method
+            outerMethod();
+        }
+    }
+}
+
+// Class 3 Main class
+class GFG {
+
+    // Main driver method
+    public static void main(String args[])
+    {
+
+        // Calling method static display method rather than an instance of that class.
+        Outer.Inner.display();
+    }
+}

@@ -1,0 +1,45 @@
+🧬 What Is Cloning?
+Cloning is the process of creating a duplicate object with the same state as the original. Java provides this via the clone() method from the Object class.
+
+class Student implements Cloneable {
+    String name;
+    int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+
+Student s1 = new Student("Tim", 22);
+Student s2 = (Student) s1.clone();
+
+⚠️ Gotchas
+If you don’t implement Cloneable, calling clone() throws CloneNotSupportedException.
+
+clone() does a shallow copy — nested objects still point to the same memory.
+
+Many devs prefer copy constructors or serialization-based cloning for better control.
+
+
+This is protected in Object class unlike tostring, hashcode which are public.
+
+
+🤔 Why Cloneable Is Required but toString() and hashCode() Aren’t
+🔧 clone() is protected in Object
+You can’t call clone() directly on an object unless:
+
+You override it and make it public
+
+You implement the Cloneable interface
+
+🧠 Cloneable is a marker interface
+It has no methods — it’s just a signal to the JVM that says:
+
+If you don’t implement it, calling clone() throws:
