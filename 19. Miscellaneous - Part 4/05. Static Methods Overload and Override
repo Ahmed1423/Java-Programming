@@ -1,0 +1,17 @@
+Can we overload static methods? 
+The answer is 'Yes'. We can have two or more static methods with the same name, but differences in input parameters.
+
+Can we Override static methods in Java? 
+We can declare static methods with the same signature in the subclass, but it is not considered overriding as there won't be any run-time polymorphism. Hence the answer is 'No'. 
+
+:
+
+🧩 Can We Override Static Methods in Interfaces?
+No, static methods in interfaces cannot be overridden by implementing classes.
+
+🔍 Why?
+Static methods in interfaces belong to the interface itself, not to instances or implementing classes.
+
+They are not inherited by the implementing class.
+
+Therefore, you cannot override them, and you cannot call them via the implementing class.
