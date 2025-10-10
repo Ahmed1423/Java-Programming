@@ -1,0 +1,50 @@
+HashMap is a collection of key-value pairs. 
+
+When Map<K, V> mp = new HashMap<>() is written, an object in the heap memory is created which is nothing but 
+an array of Node<K, V> references also called as buckets. 
+
+Each bucket in the internal array (Node<K,V>[] table) can hold:
+
+null → if no entry has hashed to that index yet
+A single Node<K,V> → if only one entry hashes to that bucket
+A chain of Node<K,V> via .next → behaves like a singly linked list
+A TreeNode<K,V> → if the bucket is treeified (Red-Black Tree)
+
+The initial size of buckets is 16(0 to 15). Load Factor is 75% or 0.75. 
+When HashMap capacity is > 12, capacity would be doubled. 
+
+put(K, V) operation: 
+
+1. JVM calculates the hashcode of key. 
+    int h = key.hashCode();
+    int hash = h ^ (h >>> 16);
+2. JVM computes bucket index: hashcode & (n - 1) where n is capacity of hashmap. 
+3. Hash Collision: 
+    3.1 No - insert in the new bucket. 
+    3.2 Yes 
+        3.2.1 key is not same - insert at the end of linkedlist. 
+        3.2.2 key is same - update the value for corresponding key. 
+
+get(K) operation: 
+
+1. JVM calculates the hashcode of key. 
+2. JVM computes bucket index: hashcode & (n - 1) where n is capacity of hashmap. 
+3. Traverse through linkedlist and return the corresponding node. 
+
+What happens when null is inserted as key: 
+Only one null key is allowed. 
+if null is inserted as key, hashcode computation is skipped and node is inserted at 0 bucket. 
+
+if size of bucket(linkedlist size) exceeds certain (8) threshold and hashmap capacity (16) exceeds certain threshold 
+linkedlist is converted to red black tree (rehashing and redistribution) i.e. a self balancing tree. This process is called treeification. 
+
+if bucket size becomes <= 6, red black tree is converted back to linked list.
+
+Node structure: 
+
+class Node {
+  int hash; 
+  T key;
+  V value;
+  Node next;
+}

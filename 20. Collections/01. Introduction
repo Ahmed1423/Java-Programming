@@ -1,0 +1,86 @@
+Collection in Java is a group of classes and interfaces that provide ready made data structure functionality for
+data storage and manipulation. 
+
+Collection Hierarchy: 
+
+
+                         Iterable interface 
+
+                         Collection Interface                                   Map Interface
+              
+    List Interface          Queue Interface           Set Interface                             - hashMap
+                                                                                                - LinkedHashMap
+    ArrayList                   Priority Queue                  HashSet                         - HashTable
+    LinkedList                                                  LinkedHashSet
+    Vector                  DeQueue Interface                                   SortedMap Interface
+    Stack 
+                                ArrayDequeue          SortedSet Interface                 TreeMap
+                                LinkedList                      TreeSet
+
+
+
+List: Ordered Collection of elements.
+
+  Mechanism - Use Arrays for ArrayList, Use LinkedList for LinkedList 
+  Duplicates - allowed
+  Null - allowed 
+  Ordering - maintains insertion order 
+  synchronized - no by default 
+  methods - get(index), add(value), set(index, value), size(), remove(index)
+  Implementations - ArrayList, LinkedList, Vector, Stack 
+
+Set: Collection that does not allow duplicate elements
+
+  Mechanism - A Set is internally backed by a HashMap. Depending on the implementation type, it is supported by either a HashMap, LinkedHashMap, or a TreeMap
+  Duplicates - not allowed
+  Null - Maximum of one null value is allowed (TreeSet - not even one)
+  Ordering - 
+      HashSet - No Ordering
+      LinkedHashSet - maintains insertion order 
+      TreeSet - natural order. We can control as well. 
+  synchronized - no
+  methods - add(value), size(), remove(value), contains(value)
+  Implementations - HashSet, LinkedHashSet, TreeSet
+
+Queue: Collection of elements which follows FIFO policy 
+
+  Mechanism: 
+    LinkedList - Doubly linked list 
+    Priority Queue - binary heap 
+    Array Dequeu - Array 
+  Duplicates - allowed
+  Null - not allowed 
+  Ordering - maintains natural order. We can control as well. 
+  synchronized - no by default  
+  methods - add(element), poll(), peek()
+  Implementations - ArrayDequeue, LinkedList, Priority Queue
+
+Maps: Key-Value Pair 
+  Mechanism: HashTable
+  Duplicates - duplicate keys are not allowed, duplicate values are allowed 
+  Null - one null key, many null values. (Tree Map - no null key, many null values) 
+  Ordering - 
+      HashMap - No Ordering
+      LinkedHashMap - maintains insertion order 
+      TreeMap - natural order. We can control as well. 
+  synchronized - no by default  
+  methods - get(key), put(key, value), remove(key), containsKey(key), keySet()
+  Implementations - HashMap, LinkedHashMap, TreeMap, HashTable
+
+Collections Utility: 
+
+1. sort 
+2. binarySearch 
+3. reverse
+4. min, max
+
+| Type       | Behavior                                                                 | Example                          |
+|------------|--------------------------------------------------------------------------|----------------------------------|
+| Fail-Fast  | Throws ConcurrentModificationException on structural change during iteration | ArrayList, HashMap               |
+| Fail-Safe  | Works on a cloned copy, no exception                                     | ConcurrentHashMap, CopyOnWriteArrayList |
+
+
+An Iterator in Java is an interface used to traverse elements in a Collection sequentially.
+
+It provides methods like hasNext(), next() and remove() to loop through collections and perform manipulation.
+An Iterator is a part of the Java Collection Framework and we can use it with collections like ArrayList, LinkedList and other classes that implement the Collection interface.
