@@ -48,3 +48,5 @@ class Node {
   V value;
   Node next;
 }
+
+HashMap is not thread safe, we can use concurrent hash map for thread safety and fail safe mechanism.
