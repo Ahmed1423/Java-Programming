@@ -1,0 +1,29 @@
+class Shape {
+    void speak() {
+        System.out.println("Shape");
+    }
+}
+
+class Triangle extends Shape{
+    void speak() {
+        System.out.println("Triangle");
+    }
+}
+
+class Rectangle extends Shape{
+    void speak() {
+        System.out.println("Rectangle");
+    }
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+
+        Shape s = new Triangle();
+        Shape sd = new Rectangle();
+        
+        s.speak();
+        sd.speak();
+    }
+}

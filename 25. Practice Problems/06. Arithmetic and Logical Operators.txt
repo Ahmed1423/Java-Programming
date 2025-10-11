@@ -1,0 +1,79 @@
+import java.util.*;
+
+class Arithmetic {
+    
+    int sum(int num1, int num2) {
+        return num1 + num2;
+    }
+    
+    int sub(int num1, int num2) {
+        return num1 - num2;
+    }
+    
+    int mul(int num1, int num2) {
+        return num1 * num2;
+    }
+    
+    int div(int num1, int num2) {
+        return num1 / num2;
+    }
+    
+    int mod(int num1, int num2) {
+        return num1 % num2;
+    }
+}
+
+class Logical {
+    
+    boolean and(boolean value1, boolean value2) {
+        return value1 && value2;
+    }
+    
+    boolean or(boolean value1, boolean value2) {
+        return value1 || value2;
+    }
+    
+    boolean not(boolean value) {
+        return !value;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        Arithmetic arithmetic = new Arithmetic();
+        
+        System.out.println("Arithmetic Operators Calculation:");
+        System.out.println();
+        
+        System.out.println("4 + 3 = " + arithmetic.sum(4, 3));
+        System.out.println("4 - 3 = " + arithmetic.sub(4, 3));
+        System.out.println("4 * 3 = " + arithmetic.mul(4, 3));
+        System.out.println("4 / 3 = " + arithmetic.div(4, 3));
+        System.out.println("4 % 3 = " + arithmetic.mod(4, 3));
+        
+        System.out.println();
+        
+        Logical logical = new Logical();
+        
+        System.out.println("Logical Operators Calculation: ");
+        System.out.println();
+        
+        System.out.println("true and true: " + logical.and(true, true));
+        System.out.println("true and false: " + logical.and(true, false));
+        System.out.println("false and true: " + logical.and(false, true));
+        System.out.println("false and false: " + logical.and(false, false));
+        
+        System.out.println();
+        
+        System.out.println("true or true: " + logical.or(true, true));
+        System.out.println("true or false: " + logical.or(true, false));
+        System.out.println("false or true: " + logical.or(false, true));
+        System.out.println("false or false: " + logical.or(false, false));
+        
+        System.out.println();
+        
+        System.out.println("not true: " + logical.not(true));
+        System.out.println("not false: " + logical.not(false));
+    }
+}

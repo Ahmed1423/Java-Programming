@@ -1,0 +1,16 @@
+class Main {
+    public static void main(String[] args) {
+        
+        // Single line comment - small information 
+        /* 
+            Multi line Comment 
+            Big Information
+        */
+        /**
+         * This is Java programming
+         * We are discussing about comments in java
+         * We can write some other stuff here
+         * How long is this 
+         */
+    }
+}

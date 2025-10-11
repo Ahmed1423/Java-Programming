@@ -1,0 +1,75 @@
+import java.io.*;
+import java.util.*;
+
+class ExceptionHandling {
+    
+    void fileNotFound() {
+        
+        Scanner sc = new Scanner(System.in); // for sc to be available to close
+        
+        try {
+            File file = new File("abc.txt");
+            sc = new Scanner(file);
+        } catch(FileNotFoundException fiex) {
+            System.out.println("failed");
+        } finally {
+            sc.close();
+            System.out.println("scanner is closed");
+        }
+    }
+    
+    void fileNotFound1() {
+        
+        File file = new File("abc.txt");
+        
+        try(Scanner sc = new Scanner(file)) {
+            System.out.println("print");
+        } catch(FileNotFoundException fiex) {
+            System.out.println("failed");
+        }
+    }
+    
+    void fileNotFound2() throws FileNotFoundException{
+        
+        File file = new File("abc.txt");
+        
+        try(Scanner sc = new Scanner(file)) {
+            System.out.println("print");
+        }
+    }
+    
+    void arithmeticException(int a, int b) {
+        if(b == 0) {
+            throw new ArithmeticException("0 is not allowed na here");
+        }
+        
+        System.out.println(a / b);
+    }
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+
+        new ExceptionHandling().fileNotFound();
+        new ExceptionHandling().fileNotFound1();
+        
+        try {
+            new ExceptionHandling().fileNotFound2();
+        } catch(Exception ex) {
+            System.out.println("display");
+        }
+        
+        try {
+            new ExceptionHandling().arithmeticException(2, 0);
+        } catch(Exception ex) {
+            System.out.println("display1");
+        }
+        
+        try {
+            new ExceptionHandling().arithmeticException(2, 1);
+        } catch(Exception ex) {
+            System.out.println("display2");
+        }
+    }
+}

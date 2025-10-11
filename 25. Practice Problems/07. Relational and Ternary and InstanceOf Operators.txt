@@ -1,0 +1,85 @@
+import java.util.*;
+
+class Relational {
+    
+    boolean greater(int num1, int num2) {
+        return num1 > num2;
+    }
+    
+    boolean greaterOrEqual(int num1, int num2) {
+        return num1 >= num2;
+    }
+    
+    boolean lesser(int num1, int num2) {
+        return num1 < num2;
+    }
+    
+    boolean lesserOrEqual(int num1, int num2) {
+        return num1 <= num2;
+    }
+    
+    boolean equal(int num1, int num2) {
+        return num1 == num2;
+    }
+    
+    boolean notEqual(int num1, int num2) {
+        return num1 != num2;
+    }
+}
+
+class Ternary {
+    
+    boolean isEven(int num) {
+        return (num % 2 == 0) ? true : false;
+    }
+}
+
+class InstanceOf {
+    
+    boolean checkInstance1() {
+        return "abcd" instanceof String;
+    }
+    
+    boolean checkInstance2() {
+        return (Object) "abcd" instanceof InstanceOf;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        Relational relational = new Relational();
+        
+        System.out.println("Relational Operators Calculation:");
+        System.out.println();
+        
+        System.out.println("4 > 3: " + relational.greater(4, 3));
+        System.out.println("3 >= 4: " + relational.greaterOrEqual(3, 4));
+        System.out.println("3 < 4: " + relational.lesser(3, 4));
+        System.out.println("4 <= 4: " + relational.lesserOrEqual(4, 4));
+        System.out.println("3 = 3: " + relational.equal(3, 3));
+        System.out.println("3 != 3: " + relational.notEqual(3, 3));
+        
+        System.out.println();
+        
+        Ternary ternary = new Ternary();
+        
+        System.out.println("Ternary Operators Calculation:");
+        System.out.println();
+        
+        System.out.println("4 is even: " + ternary.isEven(4));
+        System.out.println("5 is even: " + ternary.isEven(5));
+        
+        System.out.println();
+        
+        InstanceOf instance = new InstanceOf();
+        
+        System.out.println("Instance Of Operator Calculation:");
+        System.out.println();
+        
+        System.out.println("abcd is string: " + instance.checkInstance1());
+        System.out.println("abcd is arraylist: " + instance.checkInstance2());
+        
+        System.out.println();
+    }
+}

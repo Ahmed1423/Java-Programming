@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.util.function.*;
+
+class Main {
+    
+    public static void main(String[] args) {
+
+        List<Integer> nums = List.of(10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 6, 4);
+        
+        int result1 = nums.stream().map(num -> num * 2)
+                     .filter(num -> num % 4 == 0)
+                     .distinct()
+                     .sorted()
+                     .reduce(0, (num, sum) -> sum + num);
+        
+        int result2 = (int) nums.stream().map(num -> num * 2)
+                     .filter(num -> num % 4 == 0)
+                     .distinct()
+                     .sorted()
+                     .count();
+        
+        System.out.println(result1);
+        System.out.println(result2);
+        
+        nums.stream().map(num -> num * 2)
+                     .filter(num -> num % 4 == 0)
+                     .distinct()
+                     .sorted()
+                     .forEach(System.out::println);
+        
+    }
+}

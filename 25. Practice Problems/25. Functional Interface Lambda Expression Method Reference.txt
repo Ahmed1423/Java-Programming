@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.util.function.*;
+
+interface Operator {
+    
+    int operate(int a, int b);
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+
+        Operator add = (a, b) -> a + b;
+        Operator sub = (a, b) -> a - b;
+        Operator mul = (a, b) -> a * b;
+        Operator div = (a, b) -> a / b;
+        
+        System.out.println(add.operate(4, 3));
+        System.out.println(sub.operate(4, 3));
+        System.out.println(mul.operate(4, 3));
+        System.out.println(div.operate(4, 3));
+        
+        Predicate<Integer> isEven = x -> x % 2 == 0;
+        Consumer<Integer> printNumber = x -> System.out.println("number is " + x);
+        Supplier<String> printHelloWorld = () -> "Hello, World!";
+        Function<Integer, Integer> mul2 = (a) -> a * 2;
+        
+        System.out.println(isEven.test(4));
+        printNumber.accept(3);
+        System.out.println(printHelloWorld.get());
+        System.out.println(mul2.apply(5));
+        
+        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        
+        nums.forEach(System.out::println);
+    }
+}

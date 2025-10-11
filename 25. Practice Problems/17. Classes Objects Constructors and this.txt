@@ -1,0 +1,41 @@
+class Box {
+    
+    private double length;
+    private double width;
+    private double height;
+    
+    Box() {
+        this(0.0, 0.0, 0.0);
+    }
+    
+    Box(double length, double width, double height) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+    
+    Box(Box otherBox) {
+        this.length = otherBox.length;
+        this.width = otherBox.width;
+        this.height = otherBox.height;
+    }
+    
+    double getArea() {
+        return this.length * this.width * this.height;
+    }
+    
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        Box box1 = new Box(1.0, 2.0, 3.0);
+        Box box2 = new Box();
+        Box box3 = new Box(box1);
+    
+        System.out.println(box1.getArea());
+        System.out.println(box2.getArea());
+        System.out.println(box3.getArea());
+    }
+}

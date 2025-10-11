@@ -1,0 +1,35 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        // Input and Output from console
+        
+        Scanner sc = new Scanner(System.in);
+        
+        byte bytee = sc.nextByte();
+        short shortt = sc.nextShort();
+        int num = sc.nextInt();
+        long num1 = sc.nextLong();
+        float num2 = sc.nextFloat();
+        double num3 = sc.nextDouble();
+        boolean bit = sc.nextBoolean();
+        
+        // cannot read single character, we should read it as string
+        
+        String ch = sc.next();
+        String ch1 = sc.nextLine();
+        
+        sc.close();
+        
+        System.out.println(bytee);
+        System.out.println(shortt);
+        System.out.println(num);
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
+        System.out.println(bit);
+        System.out.println(ch);
+        System.out.println(ch1);
+    }
+}

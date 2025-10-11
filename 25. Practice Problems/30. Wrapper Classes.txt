@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+import java.util.function.*;
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        char ch = 'a';
+        
+        Character ch1 = ch;
+        char ch2 = ch1;
+        
+        System.out.println(ch1 instanceof Character);
+        System.out.println(ch2);
+    }
+}

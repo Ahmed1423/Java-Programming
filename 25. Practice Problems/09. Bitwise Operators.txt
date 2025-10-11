@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Bitwise {
+    
+    int and(int num1, int num2) {
+        return num1 & num2;
+    }
+    
+    int or(int num1, int num2) {
+        return num1 | num2;
+    }
+    
+    int xor(int num1, int num2) {
+        return num1 ^ num2;
+    }
+    
+    int leftShift(int num1, int num2) {
+        return num1 << num2;
+    }
+    
+    int rightShift(int num1, int num2) {
+        return num1 >> num2;
+    }
+    
+    int negation(int num) {
+        return ~num;
+    }
+    
+    int unsignedRightShift(int num1, int num2) {
+        return num1 >>> num2;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        
+        Bitwise bitwise = new Bitwise();
+        
+        System.out.println("Bitwise Operators: ");
+        System.out.println();
+        
+        System.out.println("3 & 4: " + bitwise.and(3, 4));
+        System.out.println("3 | 4: " + bitwise.or(3, 4));
+        System.out.println("3 ^ 4: " + bitwise.xor(3, 4));
+        System.out.println("3 << 4: " + bitwise.leftShift(3, 4));
+        System.out.println("32 >> 4: " + bitwise.rightShift(32, 4));
+        System.out.println("~3: " + bitwise.negation(3));
+        System.out.println("~-4: " + bitwise.negation(-3));
+        System.out.println("32 >>> 4: " + bitwise.unsignedRightShift(32, 4));
+        System.out.println("-32 >>> 4: " + bitwise.unsignedRightShift(-32, 4));
+        
+    }
+}

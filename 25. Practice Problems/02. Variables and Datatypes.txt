@@ -1,0 +1,22 @@
+class Main {
+    public static void main(String[] args) {
+        
+        byte bytee = 1;
+        short shortt = 2;
+        int num = 3;
+        long num1 = 4;
+        float num2 = 5.1f;
+        double num3 = 2.33;
+        boolean bit = true;
+        char ch = 'b';
+        
+        System.out.println(bytee);
+        System.out.println(shortt);
+        System.out.println(num);
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
+        System.out.println(bit);
+        System.out.println(ch);
+    }
+}

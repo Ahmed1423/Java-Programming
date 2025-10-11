@@ -1,0 +1,68 @@
+import java.util.*;
+
+class ConditionalStatements {
+    
+    void simpleIf(int num) {
+        
+        if(num % 2 == 0) {
+            System.out.println("Even");
+        }
+    }
+    
+    void ifElse(int num) {
+        if(num % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+    
+    void elseIfLadder(int num) {
+        
+        if(num == 1) {
+            System.out.println(1);
+        } else if(num == 2) {
+            System.out.println(2);
+        } else if(num == 3) {
+            System.out.println(3);
+        } else if(num == 4) {
+            System.out.println(4);
+        } else {
+            System.out.println(5);
+        }
+    }
+    
+    void switchStatement(String day) {
+        switch(day) {
+            case "Monday": System.out.println(1);
+                            break;
+            case "Tuesday": System.out.println(2);
+                            break;
+            case "Wednesday": System.out.println(3);
+                            break;
+            case "Thursday": System.out.println(4);
+                            break;
+            case "Friday": System.out.println(5);
+                            break;
+            case "Saturday": System.out.println(6);
+                            break;
+            case "Sunday": System.out.println(7);
+                            break;
+            default: System.out.println("Invalid Input");
+                    
+        }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        ConditionalStatements condStmts = new ConditionalStatements();
+        
+        condStmts.simpleIf(2);
+        condStmts.ifElse(3);
+        condStmts.elseIfLadder(5);
+        condStmts.switchStatement("Wednesday");
+        condStmts.switchStatement("Munday");
+    }
+}

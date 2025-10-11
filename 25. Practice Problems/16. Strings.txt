@@ -1,0 +1,41 @@
+import java.util.*;
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String name = "Ahmed";
+        String otherName = "Ahmed";
+        
+        String otherOtherName = new String("Ahmed");
+        
+        System.out.println(name == otherName);
+        System.out.println(name.equals(otherName));
+        
+        System.out.println(name == otherOtherName);
+        System.out.println(name.equals(otherOtherName));
+        
+        System.out.println(name.length());
+        System.out.println(name.toUpperCase());
+        System.out.println(name.contains("hm"));
+        System.out.println(name.substring(2, 4));
+        
+        StringBuilder builder = new StringBuilder();
+        
+        builder.append("1");
+        builder.append("3");
+        
+        builder.reverse();
+        
+        System.out.println(builder);
+        
+        StringBuffer buffer = new StringBuffer();
+        
+        buffer.append("1");
+        buffer.append("3");
+        
+        buffer.reverse();
+        
+        System.out.println(buffer);
+    }
+}

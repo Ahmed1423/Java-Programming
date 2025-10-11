@@ -1,0 +1,43 @@
+class Living {
+    String name;
+    int age;
+    
+    Living(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    void print() {
+        System.out.println(this.name + " " + this.age);
+    }
+}
+
+class Human extends Living {
+    
+    String name;
+    int age;
+    String workDescription;
+    
+    Human(String name, int age, String workDescription) {
+        super(name, age);
+        this.workDescription = workDescription;
+    }
+    
+    void print() {
+        super.print();
+        System.out.println("Work Description: " + workDescription);
+        System.out.println(super.name + " " + super.age + " " + 
+        workDescription);
+    }
+    
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+
+        Human human = new Human("ahmed", 24, "software engineer");
+        
+        human.print();
+    }
+}

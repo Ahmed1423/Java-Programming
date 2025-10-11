@@ -1,0 +1,10 @@
+class Main {
+    public static void main(String[] args) {
+        
+        final int num = 3;
+        
+        // num = 4; Uncommenting this results in compilation error.
+        
+        System.out.println(num);
+    }
+}

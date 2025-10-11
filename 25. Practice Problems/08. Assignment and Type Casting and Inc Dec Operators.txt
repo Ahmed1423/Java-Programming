@@ -1,0 +1,48 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        System.out.println("Assignment Operators: ");
+        System.out.println();
+        
+        int num = 3;
+        
+        num += 3;
+        num -= 4;
+        num *= 3;
+        num /= 3;
+        num %= 2;
+        
+        System.out.println(num);
+        
+        System.out.println();
+        
+        System.out.println("Type Casting Operators: ");
+        System.out.println();
+        
+        int number = 4;
+        
+        long num1 = number; // implicit type casting - widening
+        int num2 = (int) 3.14; // explicit type casting - narrowing
+        
+        System.out.println(num1);
+        System.out.println(num2);
+        
+        System.out.println();
+        
+        System.out.println("Increment and Decrement Operators: ");
+        System.out.println();
+        
+        int num4 = 4;
+        int num5 = -6;
+        
+        System.out.println("pre increment: " + ++num4);
+        System.out.println("pre decrement: " + --num4);
+        System.out.println("post increment: " + num4++);
+        System.out.println("post decrement: " + num4--);
+        System.out.println("unary plus: " + +num5);
+        System.out.println("unary minus: " + -num5);
+        
+    }
+}

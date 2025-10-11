@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Methods {
+    
+    void printHello() {
+        System.out.println("Hello");
+    }
+    
+    static void printWelcome() {
+        System.out.println("Welcome");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        
+        Methods method = new Methods();
+        
+        //Instance method
+        method.printHello();
+        
+        //Static Method
+        Methods.printWelcome();
+    }
+}
