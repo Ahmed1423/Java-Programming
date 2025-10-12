@@ -1,0 +1,19 @@
+sealed class A permits B, C, D{
+    
+}
+
+final class B extends A{
+    
+}
+
+sealed class C extends A permits E {
+    
+}
+
+non-sealed class D extends A{
+    
+}
+
+non-sealed class E extends C{
+    
+}

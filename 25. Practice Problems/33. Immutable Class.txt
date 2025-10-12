@@ -1,0 +1,36 @@
+import java.util.*;
+
+final class Person {
+    
+    private final String name;
+    private final int age;
+    private final List<String> addresses;
+    
+    Person(String name, int age, List<String> addresses) {
+        this.name = name;
+        this.age = age;
+        this.addresses = new ArrayList<>(addresses);
+    }
+    
+    String getName() {
+        return this.name;
+    }
+    
+    int getAge() {
+        return this.age;
+    }
+    
+    List<String> getAddresses() {
+        return Collections.unmodifiableList(addresses);
+    }
+    
+}
+
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        Person person = new Person("a", 1, List.of("1", "2"));
+    }
+}

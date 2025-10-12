@@ -1,0 +1,51 @@
+final class Person {
+    final int age = 10;
+    final String name;
+    final int rollNo;
+    
+    Person() {
+        this.name = "Ahmed";
+    }
+    
+    {
+        rollNo = 2;
+    }
+    
+    void hello() {
+        System.out.println(age + " " + name + " " + rollNo);
+    }
+}
+
+/*
+Uncommenting this would give error
+class Ahmed extends Person {
+    
+}
+*/
+
+class A {
+    
+    final void print() {
+        System.out.println("hello");
+    }
+}
+
+class B extends A {
+    
+    /*
+    Uncommenting this would give error
+    final void print() {
+        System.out.println("hello");
+    }
+    */
+}
+
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        Person person = new Person();
+        person.hello();
+    }
+}
