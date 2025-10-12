@@ -1,0 +1,49 @@
+import java.util.*;
+
+class Movie implements Comparable<Movie>{
+    
+    private String name;
+    private double rating;
+    private int year;
+    
+    Movie(String name, double rating, int year) {
+        this.name = name;
+        this.rating = rating;
+        this.year = year;
+    }
+    
+    @Override
+    public int compareTo(Movie otherMovie) {
+        return this.year - otherMovie.year;
+        // return Double.compare(this.rating, otherMovie.rating);
+        // return this.name.compareTo(otherMovie.name);
+    }
+    
+    @Override
+    public String toString() {
+        return this.name + " with " + this.rating + " in " + this.year;
+    }
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        Movie movie1 = new Movie("a", 7.2, 2011);
+        Movie movie2 = new Movie("b", 6.5, 2013);
+        Movie movie3 = new Movie("c", 4.3, 2012);
+        
+        
+        List<Movie> movies = new ArrayList<>();
+        
+        movies.add(movie1);
+        movies.add(movie2);
+        movies.add(movie3);
+        
+        Collections.sort(movies);
+        
+        for(Movie movie: movies) {
+            System.out.println(movie);
+        }
+    }
+}

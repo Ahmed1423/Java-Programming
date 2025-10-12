@@ -1,0 +1,16 @@
+import java.math.*;
+import java.util.*;
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        BigInteger big = new BigInteger("1");
+        
+        for(int i = 2; i <= 5; ++i) {
+            big = big.multiply(BigInteger.valueOf(i));
+        }
+        
+        System.out.println(big);
+    }
+}

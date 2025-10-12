@@ -1,0 +1,80 @@
+import java.util.*;
+
+class Movie{
+    
+    String name;
+    double rating;
+    int year;
+    
+    Movie(String name, double rating, int year) {
+        this.name = name;
+        this.rating = rating;
+        this.year = year;
+    }
+    
+    @Override
+    public String toString() {
+        return this.name + " with " + this.rating + " in " + this.year;
+    }
+}
+
+class SortByYear implements Comparator<Movie> {
+    
+    @Override
+    public int compare(Movie m1, Movie m2) {
+        return m1.year - m2.year;
+        // return Double.compare(m1.rating, m2.rating);
+        // return m1.name.compareTo(m2.name);
+    }
+}
+
+class SortByRating implements Comparator<Movie> {
+    
+    @Override
+    public int compare(Movie m1, Movie m2) {
+        // return m1.year - m2.year;
+        if(m1.rating == m2.rating) {
+            return m1.year - m2.year;
+        }
+        return Double.compare(m1.rating, m2.rating);
+        // return m1.name.compareTo(m2.name);
+    }
+}
+
+class SortByName implements Comparator<Movie> {
+    
+    @Override
+    public int compare(Movie m1, Movie m2) {
+        // return m1.year - m2.year;
+        // return Double.compare(m1.rating, m2.rating);
+        return m1.name.compareTo(m2.name);
+    }
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+        
+        Movie movie1 = new Movie("a", 7.2, 2011);
+        Movie movie2 = new Movie("b", 6.5, 2013);
+        Movie movie3 = new Movie("c", 4.3, 2012);
+        Movie movie4 = new Movie("d", 7.2, 2010);
+        
+        
+        List<Movie> movies = new ArrayList<>();
+        
+        movies.add(movie1);
+        movies.add(movie2);
+        movies.add(movie3);
+        movies.add(movie4);
+        
+        // Collections.sort(movies, new SortByYear());
+        Collections.sort(movies, new SortByRating());
+        // Collections.sort(movies, new SortByName());
+
+        
+        for(Movie movie: movies) {
+            System.out.println(movie);
+        }
+    }
+}
