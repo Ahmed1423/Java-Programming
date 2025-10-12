@@ -1,0 +1,33 @@
+class Pair<K, V> {
+    
+    K key;
+    V value;
+    
+    Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+    
+    <U> void print(U value) {
+      System.out.println(value);  
+    } 
+    
+    @Override
+    public String toString() {
+        return "{" + this.key + ", " + this.value + "}";
+    }
+}
+
+class Main {
+    
+    public static void main(String[] args) {
+        Pair<Integer, String> pair1 = new Pair<>(1, "hello");
+        Pair<String, Integer> pair2 = new Pair<>("hello", 1);
+        
+        System.out.println(pair1);
+        System.out.println(pair2);
+        
+        pair1.print(2);
+        pair2.print("kmmd");
+    }
+}
